@@ -18,11 +18,19 @@ Next, put your Symfony application into main directory and do not forget to add 
 
 Make sure you adjust `database_host` in `parameters.yml` to the database container alias "db"
 
-Then, run (put `-d` to run in the background):
+Then, set installation file as executable:
 
 ```bash
-$ docker-compose up -d
+$ chmod a+xr install.sh
 ```
+
+And then run it:
+
+```bash
+$ ./install.sh your-project-name
+```
+
+After all you can remove `install.sh` file. 
 
 You are done, you can visit your Symfony application on the following URL: `http://symfony.localhost`
 
@@ -68,10 +76,6 @@ You can check your host machine address by typing `ip addr show` in unix termina
 # Execute commands
 
 You can enter container (and perform some actions) by running `docker exec -it docker-symfony_php_1 /bin/bash` in unix terminal command.
-
-# TODO
-
-Shell script to download Symfony 4 project, remove travis files, git repository etc.
 
 # Code license
 
