@@ -30,9 +30,11 @@ And then run it:
 $ ./install.sh your-project-name
 ```
 
-After all you can remove `install.sh` file. 
+_Remember :_ to add `symfony.localhost` to `hosts` file in your system.
 
-You are done, you can visit your Symfony application on the following URL: `http://symfony.localhost`
+You are done, you can visit your Symfony application on the following URL: `http://symfony.localhost:88`
+
+_Important :_ after all you can remove `install.sh` file.
 
 _Note :_ you can rebuild all Docker images by running:
 
@@ -68,7 +70,7 @@ You can access Nginx and Symfony application logs in the following directories o
 
 # Use xdebug!
 
-To use xdebug change the line `"docker.host:127.0.0.1"` in docker-compose.yml and replace 127.0.0.1 with your machine ip addres.
+To use xdebug change the line `"docker.host:127.0.0.1"` in docker-compose.yml and replace 127.0.0.1 with your machine ip address.
 If your IDE default port is not set to 5902 you should do that, too.
 
 You can check your host machine address by typing `ip addr show` in unix terminal.
