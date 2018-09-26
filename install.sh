@@ -1,6 +1,12 @@
 #!/bin/sh
 
 # Get arguments
+if [ -z "$1" ]
+  then
+    echo "No docker directory argument supplied!"
+    exit 1
+fi
+
 PROJECT_DIR=$1
 
 # Run docker compose in background
